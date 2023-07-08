@@ -94,7 +94,7 @@ double dtw(int* sequence1, int length1, int* sequence2, int length2) {
 
 int main() {
     int sequence1[] = {1, 7, 4, 8, 2, 9, 6 ,5 ,2, 0};
-    int sequence2[] = {1, 2, 8, 5, 5, 1, 9, 4, 6};
+    int sequence2[] = {1, 2, 8, 5, 5, 1, 9, 4, 6, 5};
     int length1 = sizeof(sequence1) / sizeof(sequence1[0]);
     int length2 = sizeof(sequence2) / sizeof(sequence2[0]);
 
@@ -127,6 +127,9 @@ double fastdtw(int* sequence1, int length1, int* sequence2, int length2, int rad
         int* shrunk1 = reduceArrayByHalf(sequence1, length1);
         int* shrunk2 = reduceArrayByHalf(sequence2, length2);
 
+        //lowResPath = fastdtw(shrunk1,shrunkLength1,shrunk2,shrunkLength2,radius);
+        //window = expandedResWindow(lowResPath, sequence1, sequence2, radius);
+        //constrainedDTW(sequence1,sequence2,window);
 
 
     }
